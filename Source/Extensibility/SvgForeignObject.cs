@@ -1,4 +1,4 @@
-namespace Svg
+﻿namespace Svg
 {
     /// <summary>
     /// The 'foreignObject' element allows for inclusion of a foreign namespace which has its graphical content drawn by a different user agent

@@ -12,7 +12,7 @@ namespace Svg
 
         public SvgGdiPlusCannotBeLoadedException() : base(gdiErrorMsg) { }
         public SvgGdiPlusCannotBeLoadedException(string message) : base(message) { }
-        public SvgGdiPlusCannotBeLoadedException(Exception inner) : base(gdiErrorMsg, inner) {}
+        public SvgGdiPlusCannotBeLoadedException(Exception inner) : base(gdiErrorMsg, inner) { }
         public SvgGdiPlusCannotBeLoadedException(string message, Exception inner) : base(message, inner) { }
 
 #if !NET8_0_OR_GREATER

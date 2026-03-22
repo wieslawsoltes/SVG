@@ -1,4 +1,4 @@
-namespace Svg
+﻿namespace Svg
 {
     /// <summary>
     /// An element used to group SVG shapes.

@@ -1,4 +1,4 @@
-namespace Svg.FilterEffects
+﻿namespace Svg.FilterEffects
 {
     [SvgElement("feMergeNode")]
     public partial class SvgMergeNode : SvgElement

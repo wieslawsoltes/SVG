@@ -1,4 +1,4 @@
-namespace Svg
+﻿namespace Svg
 {
     [SvgElement("missing-glyph")]
     public partial class SvgMissingGlyph : SvgGlyph

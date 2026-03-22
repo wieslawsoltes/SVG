@@ -16,7 +16,7 @@ namespace Svg
         {
             _properties = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
         }
-    
+
         public SvgOptions(Dictionary<string, string> entities)
             : this()
         {
@@ -36,12 +36,14 @@ namespace Svg
             this.SetValue(nameof(Css), css);
         }
 
-        public Dictionary<string, string> Entities {
+        public Dictionary<string, string> Entities
+        {
             get => _entities;
             set => _entities = value;
         }
 
-        public string Css {
+        public string Css
+        {
             get => this.GetValue(nameof(Css));
             set => this.SetValue(nameof(Css), value);
         }

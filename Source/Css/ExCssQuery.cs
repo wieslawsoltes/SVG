@@ -1,9 +1,9 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
- using System.Diagnostics;
- using System.Linq;
- using System.Reflection;
- using ExCSS;
+using System.Diagnostics;
+using System.Linq;
+using System.Reflection;
+using ExCSS;
 
 namespace Svg.Css
 {
@@ -170,7 +170,7 @@ namespace Svg.Css
                 }
                 else
                 {
-                    throw new NotImplementedException();    
+                    throw new NotImplementedException();
                 }
             }
 
@@ -271,7 +271,7 @@ namespace Svg.Css
                 AttrMatchSelector attrMatchSelector => ops.AttributeExact(attrMatchSelector.Attribute, attrMatchSelector.Value),
                 AttrNotMatchSelector attrNotMatchSelector => ops.AttributeNotMatch(attrNotMatchSelector.Attribute, attrNotMatchSelector.Value),
                 ClassSelector classSelector => ops.Class(classSelector.Class),
-                ComplexSelector complexSelector =>  GetFunc(complexSelector, ops, inFunc),
+                ComplexSelector complexSelector => GetFunc(complexSelector, ops, inFunc),
                 CompoundSelector compoundSelector => GetFunc(compoundSelector, ops, inFunc),
                 FirstChildSelector firstChildSelector => GetFunc(firstChildSelector, ops),
                 LastChildSelector lastChildSelector => GetFunc(lastChildSelector, ops),
@@ -283,7 +283,7 @@ namespace Svg.Css
                 ListSelector listSelector => GetFunc(listSelector, ops, inFunc),
                 NamespaceSelector namespaceSelector => throw new NotImplementedException(),
                 PseudoClassSelector pseudoClassSelector => GetFunc(pseudoClassSelector, ops, inFunc),
-                PseudoElementSelector pseudoElementSelector => throw new NotImplementedException(), 
+                PseudoElementSelector pseudoElementSelector => throw new NotImplementedException(),
                 TypeSelector typeSelector => ops.Type(typeSelector.Name),
                 UnknownSelector unknownSelector => throw new NotImplementedException(),
                 IdSelector idSelector => ops.Id(idSelector.Id),

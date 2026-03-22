@@ -1,4 +1,4 @@
-namespace Svg
+﻿namespace Svg
 {
     /// <summary>
     /// Represents an element that is using a GraphicsPath as rendering base.

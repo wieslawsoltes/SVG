@@ -85,7 +85,7 @@ namespace Svg
                     }
                 }
                 // HSL support
-                else if (colour.StartsWith("hsl",StringComparison.InvariantCulture))
+                else if (colour.StartsWith("hsl", StringComparison.InvariantCulture))
                 {
                     try
                     {
@@ -158,7 +158,7 @@ namespace Svg
                 }
 #endif
                 int number;
-                if (Int32.TryParse(colour,NumberStyles.Integer, CultureInfo.InvariantCulture, out number))
+                if (Int32.TryParse(colour, NumberStyles.Integer, CultureInfo.InvariantCulture, out number))
                 {
                     // numbers are handled as colors by System.Drawing.ColorConverter - we
                     // have to prevent this and ignore the color instead (see #342)

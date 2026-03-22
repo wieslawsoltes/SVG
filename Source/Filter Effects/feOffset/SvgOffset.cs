@@ -1,4 +1,4 @@
-namespace Svg.FilterEffects
+﻿namespace Svg.FilterEffects
 {
     /// <summary>
     /// Note: this is not used in calculations to bitmap - used only to allow for svg xml output

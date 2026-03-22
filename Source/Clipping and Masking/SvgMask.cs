@@ -1,4 +1,4 @@
-namespace Svg
+﻿namespace Svg
 {
     /// <summary>
     /// Defines an alpha mask for compositing the current object into the background.

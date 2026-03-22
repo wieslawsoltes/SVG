@@ -1,4 +1,4 @@
-namespace Svg
+﻿namespace Svg
 {
     public enum SvgVisibility
     {

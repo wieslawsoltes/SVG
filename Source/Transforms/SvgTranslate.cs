@@ -1,4 +1,4 @@
-namespace Svg.Transforms
+﻿namespace Svg.Transforms
 {
     public sealed partial class SvgTranslate : SvgTransform
     {

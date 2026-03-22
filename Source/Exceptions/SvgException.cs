@@ -14,7 +14,7 @@ namespace Svg
 
 #if !NET8_0_OR_GREATER
         protected SvgException(SerializationInfo info, StreamingContext context)
-            : base (info, context) { }
+            : base(info, context) { }
 #endif
     }
 

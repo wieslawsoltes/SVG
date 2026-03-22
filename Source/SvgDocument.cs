@@ -375,8 +375,9 @@ namespace Svg
             var elementFactory = new SvgElementFactory();
 
             var svgDocument = Create<T>(reader, elementFactory, styles);
-            
-            if (css != null) {
+
+            if (css != null)
+            {
                 styles.Add(new SvgUnknownElement() { Content = css });
             }
 

@@ -1,4 +1,4 @@
-using Svg.Transforms;
+﻿using Svg.Transforms;
 
 namespace Svg
 {

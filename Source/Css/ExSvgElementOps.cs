@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -152,7 +152,7 @@ namespace Svg.Css
 
         public Func<IEnumerable<SvgElement>, IEnumerable<SvgElement>> NthChild(int step, int offset)
         {
-            return nodes => nodes.Where(n => n.Parent != null && GetByIds(n.Parent.Children, step == 0 ? new[]{offset} : (from i in Enumerable.Range(0, n.Parent.Children.Count / step) select step * i + offset)).Contains(n));
+            return nodes => nodes.Where(n => n.Parent != null && GetByIds(n.Parent.Children, step == 0 ? new[] { offset } : (from i in Enumerable.Range(0, n.Parent.Children.Count / step) select step * i + offset)).Contains(n));
         }
 
         public Func<IEnumerable<SvgElement>, IEnumerable<SvgElement>> OnlyChild()
@@ -204,7 +204,7 @@ namespace Svg.Css
 
         public Func<IEnumerable<SvgElement>, IEnumerable<SvgElement>> NthLastChild(int step, int offset)
         {
-            return nodes => nodes.Where(n => n.Parent != null && GetByIdsReverse(n.Parent.Children, step == 0 ? new[]{offset} : (from i in Enumerable.Range(0, n.Parent.Children.Count / step) select step * i + offset)).Contains(n));
+            return nodes => nodes.Where(n => n.Parent != null && GetByIdsReverse(n.Parent.Children, step == 0 ? new[] { offset } : (from i in Enumerable.Range(0, n.Parent.Children.Count / step) select step * i + offset)).Contains(n));
         }
 
         public Func<IEnumerable<SvgElement>, IEnumerable<SvgElement>> Root()
@@ -217,7 +217,7 @@ namespace Svg.Css
                     return Enumerable.Empty<SvgElement>();
                 }
 
-                var  root = node;
+                var root = node;
                 while (root.Parent != null)
                 {
                     root = root.Parent;

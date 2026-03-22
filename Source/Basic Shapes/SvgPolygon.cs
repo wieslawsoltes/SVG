@@ -1,4 +1,4 @@
-namespace Svg
+﻿namespace Svg
 {
     /// <summary>
     /// SvgPolygon defines a closed shape consisting of a set of connected straight line segments.

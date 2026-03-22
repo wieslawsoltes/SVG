@@ -1,4 +1,4 @@
-#if !NO_SDC
+﻿#if !NO_SDC
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;

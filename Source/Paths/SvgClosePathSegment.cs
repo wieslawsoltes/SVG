@@ -1,4 +1,4 @@
-namespace Svg.Pathing
+﻿namespace Svg.Pathing
 {
     public sealed partial class SvgClosePathSegment : SvgPathSegment
     {

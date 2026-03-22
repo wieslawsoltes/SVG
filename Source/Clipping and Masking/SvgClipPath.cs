@@ -1,4 +1,4 @@
-namespace Svg
+﻿namespace Svg
 {
     /// <summary>
     /// Defines a path that can be used by other <see cref="ISvgClipable"/> elements.

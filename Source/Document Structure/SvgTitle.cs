@@ -1,4 +1,4 @@
-namespace Svg
+﻿namespace Svg
 {
     [SvgElement("title")]
     public partial class SvgTitle : SvgElement, ISvgDescriptiveElement

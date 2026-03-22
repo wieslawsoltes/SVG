@@ -198,20 +198,20 @@ namespace Svg
                 case 'C': // curveto
                 case 'c': // relative curveto
                     {
-                    while (CoordinateParser.TryGetFloat(out var coords0, chars, ref state)
-                        && CoordinateParser.TryGetFloat(out var coords1, chars, ref state)
-                        && CoordinateParser.TryGetFloat(out var coords2, chars, ref state)
-                        && CoordinateParser.TryGetFloat(out var coords3, chars, ref state)
-                        && CoordinateParser.TryGetFloat(out var coords4, chars, ref state)
-                        && CoordinateParser.TryGetFloat(out var coords5, chars, ref state))
-                    {
-                        segments.Add(
-                            new SvgCubicCurveSegment(
-                                isRelative,
-                                new PointF(coords0, coords1),
-                                new PointF(coords2, coords3),
-                                new PointF(coords4, coords5)));
-                    }
+                        while (CoordinateParser.TryGetFloat(out var coords0, chars, ref state)
+                            && CoordinateParser.TryGetFloat(out var coords1, chars, ref state)
+                            && CoordinateParser.TryGetFloat(out var coords2, chars, ref state)
+                            && CoordinateParser.TryGetFloat(out var coords3, chars, ref state)
+                            && CoordinateParser.TryGetFloat(out var coords4, chars, ref state)
+                            && CoordinateParser.TryGetFloat(out var coords5, chars, ref state))
+                        {
+                            segments.Add(
+                                new SvgCubicCurveSegment(
+                                    isRelative,
+                                    new PointF(coords0, coords1),
+                                    new PointF(coords2, coords3),
+                                    new PointF(coords4, coords5)));
+                        }
                     }
                     break;
                 case 'S': // shorthand/smooth curveto

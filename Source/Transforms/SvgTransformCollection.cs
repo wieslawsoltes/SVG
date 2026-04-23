@@ -78,8 +78,8 @@ namespace Svg.Transforms
         {
             var result = new SvgTransformCollection();
             foreach (var transform in this)
-                 result.AddItem(transform.Clone() as SvgTransform);
-             return result;
+                result.AddItem(transform.Clone() as SvgTransform);
+            return result;
         }
 
         public override string ToString()

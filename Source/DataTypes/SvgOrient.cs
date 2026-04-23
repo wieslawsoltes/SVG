@@ -1,4 +1,4 @@
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Globalization;
 using Svg.DataTypes;
 
@@ -12,6 +12,7 @@ namespace Svg
     {
         private bool _isAuto;
         private float _angle;
+        private string _rawValue = string.Empty;
 
         public SvgOrient()
             : this(0f)
@@ -44,6 +45,7 @@ namespace Svg
             {
                 _angle = value;
                 _isAuto = false;
+                _rawValue = value.ToSvgString();
             }
         }
 
@@ -57,11 +59,18 @@ namespace Svg
             {
                 _isAuto = value;
                 _angle = 0f;
+                _rawValue = string.Empty;
             }
         }
 
+        public string RawValue
+        {
+            get { return _rawValue; }
+            set { _rawValue = value ?? string.Empty; }
+        }
+
         /// <summary>
-        /// If IsAuto is true, indicates if the orientation of a 'marker-start' must be rotated of 180� from the original orientation
+        /// If IsAuto is true, indicates if the orientation of a 'marker-start' must be rotated of 180° from the original orientation
         /// </summary>
         /// This allows a single arrowhead marker to be defined that can be used for both the start and end of a path, point in the right directions.
         public bool IsAutoStartReverse { get; set; }
@@ -91,8 +100,10 @@ namespace Svg
         {
             if (IsAuto)
                 return IsAutoStartReverse ? "auto-start-reverse" : "auto";
-            else
-                return Angle.ToSvgString();
+
+            return string.IsNullOrWhiteSpace(_rawValue)
+                ? Angle.ToSvgString()
+                : _rawValue;
         }
 
         /// <summary>

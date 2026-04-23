@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Globalization;
+using Svg;
 
 namespace Svg.DataTypes
 {
@@ -21,10 +22,33 @@ namespace Svg.DataTypes
                 case "auto-start-reverse":
                     return new SvgOrient(true, true);
                 default:
+                    var rawValue = value.ToString().Trim();
+                    var suffix = rawValue.EndsWith("grad", StringComparison.OrdinalIgnoreCase)
+                        ? "grad"
+                        : rawValue.EndsWith("deg", StringComparison.OrdinalIgnoreCase)
+                            ? "deg"
+                            : rawValue.EndsWith("rad", StringComparison.OrdinalIgnoreCase)
+                                ? "rad"
+                                : string.Empty;
+                    var numericValue = suffix.Length == 0
+                        ? rawValue
+                        : rawValue.Substring(0, rawValue.Length - suffix.Length);
+
                     float fTmp;
-                    if (!float.TryParse(value.ToString(), out fTmp))
+                    if (!float.TryParse(numericValue, NumberStyles.Float, CultureInfo.InvariantCulture, out fTmp))
                         throw new ArgumentOutOfRangeException("value must be a valid float.");
-                    return new SvgOrient(fTmp);
+
+                    var angle = suffix switch
+                    {
+                        "rad" => (float)(fTmp * (180d / Math.PI)),
+                        "grad" => fTmp * 0.9f,
+                        _ => fTmp
+                    };
+
+                    return new SvgOrient(angle)
+                    {
+                        RawValue = rawValue
+                    };
             }
         }
 

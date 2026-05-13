@@ -863,8 +863,12 @@ namespace Svg
                 foreach (var pair in style.Value)
                     newObj.AddStyle(style.Key, pair.Value, pair.Key);
 
+            CopyCustomStateTo(newObj);
+
             return newObj;
         }
+
+        partial void CopyCustomStateTo(SvgElement target);
 
         /// <summary>
         /// Fired when an Attribute of this Element has changed

@@ -1,4 +1,4 @@
-namespace Svg
+﻿namespace Svg
 {
     [SvgElement("font-face")]
     public partial class SvgFontFace : SvgElement

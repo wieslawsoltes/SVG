@@ -1,4 +1,4 @@
-using System.ComponentModel;
+ï»¿using System.ComponentModel;
 using System.Globalization;
 using Svg.DataTypes;
 
@@ -61,7 +61,7 @@ namespace Svg
         }
 
         /// <summary>
-        /// If IsAuto is true, indicates if the orientation of a 'marker-start' must be rotated of 180° from the original orientation
+        /// If IsAuto is true, indicates if the orientation of a 'marker-start' must be rotated of 180ï¿½ from the original orientation
         /// </summary>
         /// This allows a single arrowhead marker to be defined that can be used for both the start and end of a path, point in the right directions.
         public bool IsAutoStartReverse { get; set; }

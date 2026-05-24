@@ -1,4 +1,4 @@
-namespace Svg
+﻿namespace Svg
 {
     public partial class SvgUnknownElement : SvgElement
     {

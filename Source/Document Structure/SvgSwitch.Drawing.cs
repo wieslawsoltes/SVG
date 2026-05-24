@@ -1,4 +1,4 @@
-#if !NO_SDC
+﻿#if !NO_SDC
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Globalization;

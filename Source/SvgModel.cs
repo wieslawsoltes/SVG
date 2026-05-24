@@ -37,7 +37,7 @@ namespace Svg
         private Func<T, TU> Getter { get; }
         private Action<T, TU> Setter { get; }
 
-        public SvgPropertyDescriptor(DescriptorType descriptorType, string attributeName, 
+        public SvgPropertyDescriptor(DescriptorType descriptorType, string attributeName,
             string attributeNamespace, TypeConverter converter, Func<T, TU> getter, Action<T, TU> setter)
         {
             DescriptorType = descriptorType;

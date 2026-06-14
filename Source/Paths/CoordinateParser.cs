@@ -31,7 +31,7 @@ namespace Svg
             CharsPosition = 0;
             Position = 0;
             HasMore = chars.Length > 0;
-            if (char.IsLetter(chars[0])) ++CharsPosition;
+            if (HasMore && char.IsLetter(chars[0])) ++CharsPosition;
         }
     }
 

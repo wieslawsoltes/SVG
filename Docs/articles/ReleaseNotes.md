@@ -1,7 +1,7 @@
 # SVG.NET Release Notes
 The release versions are NuGet releases.
 
-## Unreleased
+## [Version 3.4.8](https://www.nuget.org/packages/Svg/3.4.8)  (2026-07-22)
 
 ### Changes
 * Removed support for unsupported .NET 6 and .NET 7, added support for .NET 9. (see [PR #1192](https://github.com/svg-net/SVG/pull/1192))
@@ -10,10 +10,15 @@ The release versions are NuGet releases.
 ### Enhancements
 * Added support for `Switch` element with "systemLanguage" selector attribute (see [#1176](https://github.com/svg-net/SVG/issues/1176)).
 * Enabled `IsTrimmable` and `IsAotCompatible` attributes on the assembly (see [#1184](https://github.com/svg-net/SVG/pull/1184)).
+* `SvgDocumentMetadata` will now keep existing children "as-is" when parsing. (see [#1219](https://github.com/svg-net/SVG/pull/1220)).
+* Added basic support for the `SvgStyle` element. (see [#1221](https://github.com/svg-net/SVG/issues/1221)).
+* Added support for `SvgCssVariablePaintServer` so declared CSS variables can be used as paint servers. (see [#1221](https://github.com/svg-net/SVG/issues/1221)).
 
 ### Fixes
+* Fixed `SvgGradientStop(SvgUnit, Color)` to apply the supplied color to `StopColor`. (see [PR #1217](https://github.com/svg-net/SVG/issues/1216))
 * Fixed: `<CompilerGeneratedFilesOutputPath>` in `Svg.Custom` to generate `Generated` directory under project. (see [PR #1153](https://github.com/svg-net/SVG/pull/1153))
 * Fixed `SvgElementCollection.Insert()` to allow child elements to be added to end of list (see [PR #1200](https://github.com/svg-net/SVG/issues/1101))
+* Fixed hex color with alpha channel (#AABBCC*80*) not being parsed correctly (see [PR #1218](https://github.com/svg-net/SVG/issues/1065))
 
 ## [Version 3.4.7](https://www.nuget.org/packages/Svg/3.4.7)  (2024-02-22)
 
